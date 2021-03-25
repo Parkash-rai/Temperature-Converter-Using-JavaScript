@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<style>
+#main{
+	 background-color: darkcyan;
+	 margin-top:60px;
+	 height: 445px;
+	 width: 450px;
+	 border-radius:30px;
+	 margin-left: 150px;}
+input[type=text]{	
+	border-radius: 10px;
+	padding: 10px;
+	width: 65%;
+    font-size:17px;
+	border:none;
+	margin:25px;
+	height:10px;
+	margin-left:60px;}
+input[type=submit]{
+    background:orange;
+    color:#fff;
+    font-weight:bold;
+    height:40px;
+    margin-left:10px;
+    width: 120px;
+    border-radius: 40px;
+
+}
+
+		
+		
+</style>
+<script>
+function cel(){
+var a,c;
+a=Number(document.getElementById("first").value);
+c= (a -32) * 0.5556;
+document.getElementById("answer").value= c;
+}
+function far(){
+var a,c;
+a=Number(document.getElementById("first").value);
+c= (a * 1.8)+32;
+document.getElementById("answer").value= c;
+}
+</script>
+</head>
+<body>
+<div id="main">
+	<h1 style="padding-top: 55px; text-decoration: underline; margin-left: 65px;"> Temperature Converter </h1>
+<label Style="font-weight:bold;  margin-left:75px; font-size:22px;color:White;">
+Enter the  Temperature in C or F </label>
+<input type="text" id="first" placeholder="Enter the Temperature"><br>
+<div class="button">
+<center><input class="btn"type="submit" value="Celsius"onclick="cel()">
+<input class="btn"type="submit" value="Fahrenheit"onclick="far()"></center>
+</div>
+<h1> The Result is:</h1>
+<input type="text" id="answer">
+
+</div>
+</body>
+</html>
